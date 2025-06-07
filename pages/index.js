@@ -53,27 +53,26 @@ export default function Home() {
         </span>
         the limited-run brand built from chaos
       </p>
+import Link from "next/link";
 
-<a
-  href="/shop"
-  style={{
-    marginBottom: "3rem",
-    display: "inline-block",
-    padding: "1rem 2rem",
-    backgroundColor: "#fff",
-    color: "#000",
-    textDecoration: "none",
-    fontWeight: "900", // EXTRA bold
-    fontSize: "1.1rem", // slightly larger
-    borderRadius: "4px",
-    border: "2px solid #000",
-    transition: "all 0.2s ease-in-out",
-  }}
-  onMouseEnter={(e) => (e.target.style.backgroundColor = "#eee")}
-  onMouseLeave={(e) => (e.target.style.backgroundColor = "#fff")}
->
-  Shop Now
-</a>
+// ...inside your component
+
+<Link href="/shop" passHref>
+  <a
+    style={{
+      marginBottom: "3rem",
+      display: "inline-block",
+      padding: "1rem 2rem",
+      backgroundColor: "#fff",
+      color: "#000",
+      textDecoration: "none",
+      fontWeight: "bold",
+      borderRadius: "4px",
+      border: "2px solid #000"
+    }}
+    Shop Now
+  </a>
+</Link>
 
     </div>
   );
